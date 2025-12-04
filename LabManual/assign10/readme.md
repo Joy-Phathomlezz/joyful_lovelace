@@ -32,8 +32,6 @@ gcc recv_raw_tcp.c -o recv_raw_tcp
 
 ## Note
 
-- sodu (raw sockets c'm bro)
-
 
 ```bash
 !!! on h1:

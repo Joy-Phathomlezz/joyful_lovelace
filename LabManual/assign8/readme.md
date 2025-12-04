@@ -1,12 +1,19 @@
-How to Run (in Mininet or real VMs):
+# Build and run
+- Compile the server 
 
-    On server host:
-    gcc chat_server.c -o chat_server -lpthread
-    ./chat_server <port>
+```sh
+gcc chat_srv.c -o chat_srv 
+./udp_srv 12345
+```
 
-    On each client host:
-    gcc chat_client.c -o chat_client -lpthread
-    ./chat_client <server_ip> <port> <clientNum>
-    (e.g., ./chat_client 10.0.0.5 5555 1 for client 1, ...and so on for 2, 3...)
+- Compile the client:
 
-All messages are broadcast to all connected clients and logged to chatlog.txt on the server.
+```sh
+gcc chat_clnt.c -o chat_clnt
+./clnt 10.0.0.1 12345 1
+```
+
+Notes:
+- All messages are broadcast to all connected clients and logged to chatlog.txt on the server.
+
+- start server on h1

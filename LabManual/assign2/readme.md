@@ -1,27 +1,32 @@
-Compile:
+# Usage
 
-text
-gcc tcp_fruit_server.c -o tcp_fruit_server
-gcc tcp_fruit_client.c -o tcp_fruit_client
+- compile the srv.c and run in host node h1 with IP 10.0.0.1
+- server listens on port 5555 
+- compile the clnt.c and run in host node h1 with IP 10.0.0.2
+- NOTE - during running the executable pass the host IP , port , fruit_name quantity 
 
-Run Server:
+- for getting the fruits and their quantity read the tcp_srv.c code
+- try with mulitple clients in diff host of mininet
 
-text
-./tcp_fruit_server 5555
+## cpy & pst
 
-Run Client (any number on different hosts):
+```bash
+gcc tcp_srv.c -o tcp_srv
+./tcp_srv
+```
+Make sure to run clnt in h2 
+```bash
+gcc tcp_clnt.c -o tcp_clnt
+./clnt 10.0.0.1 5555 apple 5
+```
+## Main Concepts Used
 
-    text
-    ./tcp_fruit_client <server_ip> 5555 apple 2
+- TCP sockets: socket(), bind(), listen(), accept(), connect(), read(), write()
 
-Main Concepts Used
+- Data parsing and updating (fruit quantity, last sold timestamp)
 
-    TCP sockets: socket(), bind(), listen(), accept(), connect(), read(), write()
+- Simple unique customer tracking (<IP, port>)
 
-    Data parsing and updating (fruit quantity, last sold timestamp)
+- Regret message if not enough quantity.
 
-    Simple unique customer tracking (<IP, port>)
-
-    Regret message if not enough quantity.
-
-    Client sees running list and total unique customer count every transaction.
+- Client sees running list and total unique customer count every transaction.
