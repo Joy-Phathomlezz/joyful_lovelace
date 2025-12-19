@@ -6,6 +6,8 @@ File upload and download using TCP.
 ## Exercise
 Write a client server socket program in TCP for uploading and downloading files between two different hosts. Also calculate the transfer time in both the cases.
 
+![Screenshot](assign9.png)
+
 ## Implementation
 
 ### Server ([file_server.c])
