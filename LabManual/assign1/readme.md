@@ -1,5 +1,8 @@
-# Usage
+# Question 1
+Write a program to run TCP client and server socket programs where client first
+says “Hi” and in response server says “Hello”.
 
+![Screenshot](assign1.png)
 - compile the srv.c and run in host node h1 with IP 10.0.0.1
 - server listens on port 5555 
 - compile the clnt.c and run in host node h1 with IP 10.0.0.2
