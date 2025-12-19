@@ -1,3 +1,8 @@
+# Question 3
+Redo assignment 2 using UDP socket.
+
+![Screenshot](assign3.png)
+
 # Usage
 
 - compile the srv.c and run in host node h1 with IP 10.0.0.1
