@@ -1,3 +1,9 @@
+# Question 10
+Write two C programs using raw socket to send i. TCP packet where TCP payload
+will contain your roll number. ii. ICMP time stamp messages towards a target IP.
+
+![Screenshot](assign10)
+
 # Setup 
 
 
