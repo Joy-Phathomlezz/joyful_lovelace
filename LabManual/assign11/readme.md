@@ -1,3 +1,9 @@
+# Question 11
+Write a RAW socket program to generate TCP SYN flood based DDoS attack
+towards an IP address. Take four mininet hosts as agent devices.
+
+![Screenshot](assign11.png)
+
 # CN Lab - Assignment 11
 
 ## Objective
